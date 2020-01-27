@@ -13,5 +13,5 @@ int main()
 	d=sub(a,b);
 	e=mltplc(a,b);
 	f=div(a,b);
-        printf("%d/n%d/n%d/n%d",c,d,e,f);
+        printf("Summation= %d\nSubstraction= %d\n Multiplication=%d\n Division=%d",c,d,e,f);
 }
