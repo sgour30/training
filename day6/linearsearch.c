@@ -3,6 +3,7 @@ int main()
 {
 	int i,j,n,arr[10];
 	printf("Enter Array");
+	int flag=0;
 	for(i=0;i<10;i++)
 	{
 		scanf("%d",&arr[i]);
@@ -13,11 +14,13 @@ int main()
 	{
 		if(n==arr[j])
 		{
-			printf("Found Number");
+			printf("Found Number at %dth position",j+1);
+			flag=1;
+			break;
 		}
-		else
-		{
-			printf("Number not in array");
-		}
+	}
+	if(flag==0)
+	{
+	printf("Number not found in array");	
 	}
 }	
