@@ -1,16 +1,19 @@
 #include<stdio.h>
 int main()
 {
-	int i,j,k ,a[3][3],sum;
-	for (i=0;i<3;i++)
+	printf("Enter number of rows and columns");
+	int i,j,n ,a[n][n],sum;
+	scanf("%d",&n);
+	printf("Enter arrray elements Row-Wise :");
+	for (i=0;i<n;i++)
 	{
-		for(j=0;j<3;j++)
+		for(j=0;j<n;j++)
 		{
 			scanf("%d",&a[i][j]);
 		}
 	}
 	sum=0;
-        for(i=0;i<3;i++)
+        for(i=0;i<n;i++)
 	{
 		
 		for(j=0;j<i;j++)
@@ -21,5 +24,5 @@ int main()
 			
 		}
 	}
-        printf(	"%d",sum);
+        printf("%d",sum);
 }
