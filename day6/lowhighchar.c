@@ -1,11 +1,12 @@
 #include<stdio.h>
 int main()
 {     
-	int n,i,j;
+	int n,i;
 	char arr[10],max,min;
+	printf("Enter 10 characters : ");
 	for(i=0;i<10;i++)
 	{
-		scanf("%c ",&arr[i]);
+		scanf("%c",&arr[i]);
 	}
         max=arr[0];
 	for(i=0;i<10;i++)
