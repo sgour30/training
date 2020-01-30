@@ -22,19 +22,20 @@ int main()
        	 for(i=0;i<3;i++)
 	 {   
 		 for(j=0;j<3;j++)                                                                                                                                                    {  
-		   mul[i][j]=0;  
+	         {
+	           mul[i][j]=0;  
 		   for(k=0;k<3;k++)
 		   {
 			   mul[i][j]=mul[i][j]+(arr1[i][k]*arr2[k][j]);
 		   }
 	       }
 	 }
-	    for(i=0;i<3;i++)
-	    {
+	 for(i=0;i<3;i++)
+	 {
 		    for(j=0;j<3;j++)
 		    {
 			    printf("%d ",mul[i][j]);
 	            }
-             }
+         }
 }	    
-	    
+    
