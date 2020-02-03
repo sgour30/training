@@ -1,7 +1,5 @@
 int sum(int a, int b)
 {
- int sum;	
- sum=a+b;
- return sum;
+ return a+b;
 }
 
