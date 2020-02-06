@@ -6,14 +6,15 @@ int main()
   int num;
   char temp;
 
-  scanf("%d ",&num);
+   scanf("%d",&num);
 
    char* ptr =(char*)calloc(num,sizeof(char));
 
    printf("Enter string\n");
+
    for(int i=0;i<num;i++)
    {
-   scanf("%c",&ptr[i]);
+ 	 scanf(" %c",&ptr[i]);
    }
   
   for(int i=0;i<(num/2);i++)

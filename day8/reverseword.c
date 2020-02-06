@@ -18,8 +18,10 @@ int main()
   {
 	  if(ptr1[i]=space)
 	  { 
-	   for(int j=num;j>0;j--)
-	   {
+	   for(int (num-i);j<num;j++)
+
+	   {  
+		   ptr[]=
 
 	   }
 

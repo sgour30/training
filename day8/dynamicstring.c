@@ -2,24 +2,43 @@
 #include<stdlib.h>
 int main()
 {
-  printf("Enter character");
-  int row,col;
-  scanf("%d %d",&row,&col);
-  char**ptr =(char**)calloc(row,sizeof(char*));
-  for(int i=0;i<row;i++)
-  {
-
-          ptr[i]=(char*)calloc(col,sizeof(char));
-
-
+  printf("Enter Number of strings :");
+  int n,size;
+  scanf("%d",&n);
+  printf("\nEnter size of strings :");
+  scanf("%d",&size);
+  
+  
+  char**ptr =(char**)calloc(n,sizeof(char*));
+  
+  for(int i=0;i<n;i++)
+   {
+     
+      ptr[i]= (char*)calloc(size,sizeof(char));
+     
    }
-   printf("Enter strings");
-   for(int i=0;i<row;i++)
-  {
-          for(int j=0;j<col;j++)
+  
+   printf("\nEnter strings :");
+  
+   for(int i=0;i<n;i++)
+   {
+          for(int j=0;j<size;j++)
           {
-            scanf("%c",&pt
+            scanf("%c",&ptr[i][j]);
+          }
+  }
+
+   printf("Your Strings are : \n");
+  
+
+   
+   for(int i=0;i<n;i++)
+   {
+          for(int j=0;j<size;j++)
+          {
+            printf("%c",ptr[i][j]);
+          }
+  }
 }
-
-
+    
 
