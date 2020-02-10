@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-	printf("Enter number of rows and columns");
+	
 	int i,j,n ,a[n][n],sum;
+	printf("Enter number of rows and columns");
 	scanf("%d",&n);
 	printf("Enter arrray elements Row-Wise :");
 	for (i=0;i<n;i++)
