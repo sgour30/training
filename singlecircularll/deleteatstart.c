@@ -39,9 +39,16 @@ void delete()
 {
 
    struct node* temp;
+   struct node* ptr;
    temp=root;
+   ptr=root;
+   while(ptr->link!=root)
+   {
+	   ptr=ptr->link;
+   }
    root=root->link;
-   temp->link=root;
+   ptr->link=root;
+   
    free(temp);
 
 
