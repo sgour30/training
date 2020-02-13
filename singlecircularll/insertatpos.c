@@ -7,7 +7,6 @@ struct node
 };
 
 struct node * root= NULL;
-
 void insertion(int x)
 {
   
@@ -33,7 +32,7 @@ void insertion(int x)
                 temp->link=root;
         }
 }
-/*
+
 void position(int p,int e)
 {
    struct node* temp;
@@ -49,63 +48,8 @@ void position(int p,int e)
    ptr->link=temp;
 }
 
-*/
 
-/*void delete(int p)
-{
-
-   struct node* temp;
-   struct node* ptr;
-   temp=root;
-   ptr=root;
-   for(int i=0;i<p-2;i++)
-   {
-	   temp=temp->link;
-   }
-   for(int i=0;i<p-1;i++)
-   {
-	 ptr=ptr->link;
-   }
-   temp->link=ptr->link;
-   ptr->link=root;
-   free(ptr);
-}*/
-
-/*void delete()
-{
-
-   struct node* temp;
-   temp=root;
-   root=root->link;
-   temp->link=root;
-   free(temp);
-
-
-}*/
-
-void delpos(int p)
-{
-
-   struct node* temp;
-   struct node* ptr;
-   temp=root;
-   ptr=root;
-   for(int i=0;i<p-2;i++)
-   {
-           temp=temp->link;
-   }
-   for(int i=0;i<p-1;i++)
-   {
-         ptr=ptr->link;
-   }
-   temp->link=ptr->link;
-   ptr->link=NULL;
-   free(ptr);
-}
-
-
-
-
+        	
 void display()
 {
  struct node *check;
@@ -119,7 +63,6 @@ void display()
  printf("%d",check->data);
 
 }
-
 
 int main()
 {
@@ -135,22 +78,13 @@ int main()
 	   display();
 	}
 
-/*	printf("\nEnter position to delete :");
+	printf("\nEnter position to insert :");
         scanf("%d",&p);
         printf("\nEnter element");
 	scanf("%d",&e);
-	delete(p,e);
-	display();*/
-
-        printf("Enter position to delete");
-        scanf("%d",&x);	
-     	delpos(x);
-	printf("\nList after deleting from end :");
-	display();
-	
-
-       
-         return 0;
+	position(p,e);
+	display();       
+        return 0;
 	
 }
 		

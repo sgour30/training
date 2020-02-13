@@ -17,7 +17,7 @@ int main()
 				printf("* ");
 				k++;
 			}
-			else
+		else
 			{
 				printf("%i ",k++);
 			}

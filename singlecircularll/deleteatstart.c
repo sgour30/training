@@ -33,45 +33,9 @@ void insertion(int x)
                 temp->link=root;
         }
 }
-/*
-void position(int p,int e)
-{
-   struct node* temp;
-   temp= (struct node*)malloc(sizeof(struct node));
-   temp->data=e;
-   struct node *ptr;
-   ptr=root;
-   for(int i=0;i<p-2;i++)
-   {
-           ptr=ptr->link;
-   }
-   temp->link=ptr->link;
-   ptr->link=temp;
-}
 
-*/
 
-/*void delete(int p)
-{
-
-   struct node* temp;
-   struct node* ptr;
-   temp=root;
-   ptr=root;
-   for(int i=0;i<p-2;i++)
-   {
-	   temp=temp->link;
-   }
-   for(int i=0;i<p-1;i++)
-   {
-	 ptr=ptr->link;
-   }
-   temp->link=ptr->link;
-   ptr->link=root;
-   free(ptr);
-}*/
-
-/*void delete()
+void delete()
 {
 
    struct node* temp;
@@ -81,31 +45,8 @@ void position(int p,int e)
    free(temp);
 
 
-}*/
-
-void delpos(int p)
-{
-
-   struct node* temp;
-   struct node* ptr;
-   temp=root;
-   ptr=root;
-   for(int i=0;i<p-2;i++)
-   {
-           temp=temp->link;
-   }
-   for(int i=0;i<p-1;i++)
-   {
-         ptr=ptr->link;
-   }
-   temp->link=ptr->link;
-   ptr->link=NULL;
-   free(ptr);
 }
-
-
-
-
+        	
 void display()
 {
  struct node *check;
@@ -135,19 +76,9 @@ int main()
 	   display();
 	}
 
-/*	printf("\nEnter position to delete :");
-        scanf("%d",&p);
-        printf("\nEnter element");
-	scanf("%d",&e);
-	delete(p,e);
-	display();*/
-
-        printf("Enter position to delete");
-        scanf("%d",&x);	
-     	delpos(x);
-	printf("\nList after deleting from end :");
+    delete();
+	printf("List after deleting from start");
 	display();
-	
 
        
          return 0;
