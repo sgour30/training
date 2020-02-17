@@ -14,6 +14,7 @@ void insertion()
 	struct node* temp;
         temp= (struct node*)malloc(sizeof(struct node));
         printf("Enter Element:");
+	
 	scanf("%d",&x);
         temp->data=x;
         temp->link=NULL;
@@ -30,11 +31,27 @@ void insertion()
                        p=p->link;
                 }
                 p->link=temp;
+	        	
         }
-	printf("Press ENTER key to Continue\n");
-        getchar();
 
 
+
+}
+
+void reverse()
+{
+        struct node *link,*current,*prev;
+       
+        current=root;
+	prev=NULL;
+	while(current!=NULL)
+	{
+		link=current->link;
+		current->link=prev;
+		prev=current;
+		current=link;
+	}
+	root=prev;
 
 }
 
@@ -42,7 +59,7 @@ void display()
 {
  struct node *check;
  check=root;
- printf("List is :");
+ printf("\nList is :");
  while(check!=NULL)
  {
          printf("%d ", check->data);
@@ -53,15 +70,33 @@ void display()
 int main()
 {
    int opt;
-   printf("Select options:");
-   printf("\n1. Insertion\n2. Reverse\n3. Display");
-   printf("Your choice ?");
+  int choice =1;
+  while(choice==1)
+  {
+   printf("\nSelect options:");
+   printf("\n1. Insertion\n2. Reverse\n3. Display\n4. Exit");
+   printf("\nYour choice ?");
    scanf("%d",&opt);
    if(opt==1)
    {
-	   void insertion();
+	  insertion();
    }
-   printf("Press ENTER key to Continue\n");  
-   getchar(); 
+   else if(opt==2)
+   {
+        reverse();
+   }
+
+   else if(opt==3)
+   {
+	   display();
+   }
+   else if(opt==4)
+   {
+	   printf("\nSee you again!");
+	   choice=0;
+   }
+   else
+	   printf("\nInvalid choice!!! Enter Again");
+  }
 }
 
