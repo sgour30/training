@@ -109,6 +109,7 @@ void deleteatstart()
 	}
         root=root->next;
 	root->prev=ptr;
+	ptr->next=root;
         temp->next=NULL;	
         temp->prev=NULL;
 	free(temp);
@@ -135,8 +136,11 @@ void deleteatend()
 	free(temp);
 }
 
-void deletepos(int p)
+void deletepos()
 {
+   int p;
+   printf("Enter the Position to delete from");
+   scanf("%d",&p);
    struct node* temp;
    struct node* ptr;
    temp=root;
@@ -159,15 +163,37 @@ void deletepos(int p)
 void display()
 {
 	struct node *temp;
-	printf("\nList is : ");
 	temp=root;
-	while(temp->next!=root)
+	if(temp==NULL)
+        {
+                printf("It seems your linked list is empty , please insert first\n");
+        }
+        else
 	{
-		printf("%d ",temp->data);
+	   printf("\nHere is your linked list:-");
+            printf("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+
+		while(temp->next!=root)
+	{
+		printf("%d <->",temp->data);
 		temp=temp->next;
 	}
         printf("%d",temp->data);
-	
+	printf("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+	}
+}
+void printreverse()
+{
+ struct node *ptr;
+ ptr=root->prev;
+ printf("\nReverse list is :");
+// printf("%d",ptr->data);
+ while(ptr->prev!=root)
+ {
+  printf("%d",ptr->data); 
+	 ptr=ptr->prev;
+ }		
 }
 
 
@@ -207,6 +233,13 @@ void insertion()
 
 void deletion()
 {
+  struct node *ptr;
+  ptr=root;
+  if(ptr==NULL)
+  {
+	  printf("There is nothing to delete!!!\n");
+  }
+  else{
   int opt;
   int choice =1;
   while(choice==1)
@@ -226,7 +259,7 @@ void deletion()
 
    else if(opt==3)
    {
-          insertpos ();
+          deletepos ();
    }
    else if(opt==4)
    {
@@ -237,17 +270,18 @@ void deletion()
            printf("\nInvalid choice!!! Enter Again");
 
   }
-
+  }
 
 }
 int main()
 {
+  printf("Welcome to Doubly circular linked list");	
   int opt;
   int choice =1;
   while(choice==1)
   {
    printf("\nSelect options:");
-   printf("\n1. Insertion\n2. Deletion\n3. Display\n4. Exit");
+   printf("\n1. Insertion\n2. Deletion\n3. Display\n4. Exit\n5. Print Reverse");
    printf("\nYour choice ?");
    scanf("%d",&opt);
    if(opt==1)
@@ -267,6 +301,10 @@ int main()
    {
            printf("\nSee you again!");
            choice=0;
+   }
+   else if(opt==5)
+   {
+       printreverse();	   
    }
    else
            printf("\nInvalid choice!!! Enter Again");
