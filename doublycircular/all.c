@@ -189,11 +189,12 @@ void printreverse()
  ptr=root->prev;
  printf("\nReverse list is :");
 // printf("%d",ptr->data);
- while(ptr->prev!=root)
+ while(ptr!=root)
  {
-  printf("%d",ptr->data); 
+  printf("%d ",ptr->data); 
 	 ptr=ptr->prev;
- }		
+ }	
+ printf("%d",ptr->data); 
 }
 
 
