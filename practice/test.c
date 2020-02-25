@@ -1,33 +1,31 @@
-#include<stdio.h>
-#include<stdlib.h>
-int main()
-{
-  printf("Enter number of elements ");
-  int num;
-  char temp;
-
-  scanf("%d",&num);
-
-   char* ptr =(char*)calloc(num,sizeof(char));
-
-   printf("Enter string\n");
-   for(int i=0;i<num;i++)
-   {
-   scanf("%c",&ptr[i]);
-   }
-  
-  for(int i=0;i<(num/2);i++)
-  {
-	  temp=ptr[i];
-	  ptr[i]=ptr[num-i-1];
-	  ptr[num-i-1]=temp;
-  }
-  
-   for(int i=0;i<num;i++)
-  {
-	   
-   printf("%c",ptr[i]);
-  
-  }
-}
-
+1802.c
+2darray.c
+a.out
+argc.c
+argcc.cpp
+calloc.c
+funcptr.c
+isspace.c
+ll.c
+mallloc.c
+malloc.c
+ndimension.c
+pattern.c
+pointer.c
+practice.c
+ptr.c
+qns.c
+queue.c
+realloc.c
+reversell.c
+stackll.c
+struct.c
+test2.c
+test.c
+try2.c
+try3.c
+try4.c
+try5.c
+try6.c
+try.c
+typecast.c
