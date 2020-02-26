@@ -4,12 +4,14 @@
 int main()
 {
 	int fd = open("nfile.txt",O_WRONLY,0777);
-	printf("%d",fd);
+	printf("fd =%d",fd);
 	int newfd= dup(fd);
-	printf("\n%d",newfd);
+	printf("\nnew fd=%d",newfd);
 	fd= dup2(fd, newfd);
-        printf("%d",newfd);
-        printf("%d",fd);	
+        printf("\nnew fd%d =",newfd);
+        printf("\nfd %d",fd);
+    //  write(fd,"samarth",7);
+        write(newfd,"wow",3);	
 }
 
 
